@@ -1,4 +1,3 @@
-```tsx
 "use client";
 
 import { Suspense, useState } from "react";
@@ -38,67 +37,36 @@ function LoginForm() {
 
   return (
     <div className="rounded-2xl border border-line bg-panel p-8">
-      <h1 className="mb-1 font-display text-2xl font-semibold">
-        Welcome back
-      </h1>
-
-      <p className="mb-6 text-sm text-mist">
-        Log in to pick up right where you left off.
-      </p>
+      <h1 className="mb-1 font-display text-2xl font-semibold">Welcome back</h1>
+      <p className="mb-6 text-sm text-mist">Log in to pick up right where you left off.</p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <label className="block">
-          <span className="mb-1.5 block text-xs font-medium text-mist">
-            Email
-          </span>
-          <input
-            required
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="input"
-          />
+          <span className="mb-1.5 block text-xs font-medium text-mist">Email</span>
+          <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input" />
         </label>
 
         <label className="block">
-          <span className="mb-1.5 block text-xs font-medium text-mist">
-            Password
-          </span>
-          <input
-            required
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="input"
-          />
+          <span className="mb-1.5 block text-xs font-medium text-mist">Password</span>
+          <input required type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" />
         </label>
 
         {error && <p className="text-sm text-coral">{error}</p>}
 
         <div className="flex justify-end">
-          <Link
-            href="/forgot-password"
-            className="text-xs text-cyan hover:underline"
-          >
+          <Link href="/forgot-password" className="text-xs text-cyan hover:underline">
             Forgot password?
           </Link>
         </div>
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="btn-primary w-full"
-        >
+        <button type="submit" disabled={loading} className="btn-primary w-full">
           {loading ? "Logging in…" : "Log in"}
         </button>
       </form>
 
       <p className="mt-6 text-center text-sm text-mist">
         New here?{" "}
-        <Link
-          href="/signup"
-          className="text-cyan hover:underline"
-        >
+        <Link href="/signup" className="text-cyan hover:underline">
           Create an account
         </Link>
       </p>
@@ -113,4 +81,3 @@ export default function LoginPage() {
     </Suspense>
   );
 }
-```
