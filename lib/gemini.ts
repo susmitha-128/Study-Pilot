@@ -10,7 +10,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 // "gemini-2.0-flash" is fast and included in the free tier. Swap to
 // "gemini-1.5-pro" for higher quality if you're on a paid tier.
-export const AGENT_MODEL = "gemini-2.0-flash";
+export const AGENT_MODEL = "gemini-3.6-flash";
 
 function cleanJson(text: string) {
   return text.replace(/^```json\s*|\s*```$/g, "").trim();
